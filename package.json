@@ -1,0 +1,26 @@
+{
+  "name": "karma-angular-filesort",
+  "version": "0.1.0",
+  "description": "Sort AngularJS files before a Karma run.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "karma-plugin",
+    "karma-framework"
+  ],
+  "author": "Majid Burney <majid@euphoricsoup.com>",
+  "license": "MIT",
+  "dependencies": {
+    "minimatch": "^1.0.0",
+    "ng-dependencies": "^0.1.2",
+    "q": "^1.0.1",
+    "toposort": "^0.2.10"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "sinon": "^1.10.3",
+    "sinon-chai": "^2.6.0"
+  }
+}

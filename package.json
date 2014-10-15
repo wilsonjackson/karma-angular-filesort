@@ -6,12 +6,20 @@
   "scripts": {
     "test": "mocha"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wilsonjackson/karma-angular-filesort.git"
+  },
   "keywords": [
     "karma-plugin",
-    "karma-framework"
+    "karma-framework",
+    "karma-adapter"
   ],
   "author": "Majid Burney <majid@euphoricsoup.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wilsonjackson/karma-angular-filesort/issues"
+  },
   "dependencies": {
     "minimatch": "^1.0.0",
     "ng-dependencies": "^0.1.2",

@@ -36,16 +36,16 @@ describe('karma-angular-filesort', function () {
 	}
 
 	function emitFiles(files) {
-		emitter.emit('file_list_modified', Q.when(files.reduce(function (batch, file) {
+		emitter.emit('file_list_modified', files.reduce(function (batch, file) {
 			var fixture = loadFixture(file);
 			batch.served.push(fixture);
 			batch.included.push(fixture);
 			return batch;
-		}, {served: [], included: []})));
+		}, {served: [], included: []}));
 	}
 
 	function verifyPromise(promise, verify, done) {
-		promise
+		Q.resolve(promise)
 			.then(verify)
 			.then(done)
 			.catch(function (error) {

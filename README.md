@@ -10,6 +10,11 @@ Installation
 
     npm install --save-dev karma-angular-filesort
 
+Compatibility
+-------------
+
+For Karma version 0.13.x, use version ~1.0 of this plugin. For older Karma versions, use 0.1.
+
 Configuration
 -------------
 

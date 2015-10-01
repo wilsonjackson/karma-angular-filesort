@@ -96,6 +96,22 @@ describe('karma-angular-filesort', function () {
 		}, done);
 	});
 
+	it('should not reorder ng and ngLocale (Angular own) modules', function (done) {
+		sortFiles(emitter, logger, __dirname);
+		emitFiles(['unrelated1.js', 'unrelated2.js', 'dependsOnA.js', 'definesA.js', 'definesNg.js', 'unrelated3.js', 'unrelated4.js', 'definesNgLocale.js']);
+		expect(emit).to.have.been.calledWith('file_list_modified', sinon.match.any);
+		verifyPromise(emit.args[0][1], function (files) {
+			expect(files.included[0].path).to.match(/unrelated1\.js$/);
+			expect(files.included[1].path).to.match(/unrelated2\.js$/);
+			expect(files.included[2].path).to.match(/definesA\.js$/);
+			expect(files.included[3].path).to.match(/dependsOnA\.js$/);
+			expect(files.included[4].path).to.match(/definesNg\.js$/);
+			expect(files.included[5].path).to.match(/unrelated3\.js$/);
+			expect(files.included[6].path).to.match(/unrelated4\.js$/);
+			expect(files.included[7].path).to.match(/definesNgLocale\.js$/);
+		}, done);
+	});
+
 	it('should allow a whitelist to restrict which files are reordered', function (done) {
 		sortFiles(emitter, logger, __dirname, {whitelist: ['fixture/definesA.js', 'fixture/dependsOnA.js']});
 		emitFiles(['definesB.js', 'unrelated1.js', 'dependsOnA.js', 'definesA.js']);

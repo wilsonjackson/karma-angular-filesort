@@ -1,6 +1,6 @@
 {
   "name": "karma-angular-filesort",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sort AngularJS files before a Karma run.",
   "main": "lib/index.js",
   "scripts": {

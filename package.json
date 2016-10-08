@@ -1,6 +1,6 @@
 {
   "name": "karma-angular-filesort",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Sort AngularJS files before a Karma run.",
   "main": "lib/index.js",
   "scripts": {
@@ -21,14 +21,14 @@
     "url": "https://github.com/wilsonjackson/karma-angular-filesort/issues"
   },
   "dependencies": {
-    "minimatch": "^1.0.0",
+    "minimatch": "^3.0.3",
     "ng-dependencies": "^0.3.0",
     "q": "^1.0.1",
     "toposort": "^0.2.10"
   },
   "devDependencies": {
     "chai": "^1.9.2",
-    "mocha": "^1.21.5",
+    "mocha": "^3.1.0",
     "sinon": "^1.10.3",
     "sinon-chai": "^2.6.0"
   }

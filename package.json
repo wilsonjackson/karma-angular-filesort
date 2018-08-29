@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "minimatch": "^3.0.3",
-    "ng-dependencies": "^0.3.0",
+    "ng-dependencies": "^0.8.1",
     "q": "^1.0.1",
     "toposort": "^0.2.10"
   },
